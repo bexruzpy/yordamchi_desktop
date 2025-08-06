@@ -1,0 +1,2 @@
+class Salom:
+    pass
