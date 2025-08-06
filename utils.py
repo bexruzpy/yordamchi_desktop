@@ -35,4 +35,5 @@ def set_blur_effect(window):
     data.SizeOfData = ctypes.sizeof(accent)
 
     ctypes.windll.user32.SetWindowCompositionAttribute(hwnd, ctypes.byref(data))
+    
 
