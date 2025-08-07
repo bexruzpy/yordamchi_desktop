@@ -11,7 +11,7 @@ from PyQt5.QtGui import QRegion, QPainterPath
 from PyQt5.QtGui import QPixmap
 from music.ui_classes import MusicWindow
 from home.ui_classes import HomeWindow
-
+from browser import BrowserFrame
 
 
 app = QApplication(sys.argv)
@@ -34,10 +34,9 @@ music3 = MusicWindow(
     active_button=home.ideas_btn
     )
 
-
-musicm = MusicWindow(
-    window_title="Musiqa1",
-    active_button = music.pushButton_4
-    )
+browser = BrowserFrame(
+    window_title="Browser",
+    active_button=music.pushButton_4
+)
 
 sys.exit(app.exec_())

@@ -146,3 +146,16 @@ class BaseFrame(QFrame):
             self.follow_frame.start_y += step
             self.follow_frame.start_y = min(0, self.follow_frame.start_y)
             self.follow_frame.moveEvent("refresh follower frames")
+
+
+class FullScreenFrame(BaseFrame):
+    def __init__(self, *args, **kwargs):
+        super(FullScreenFrame, self).__init__(*args, **kwargs)
+        # Set window top hint
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
+    def showEvent(self, event):
+        self.showFullScreen()
+    def mouseMoveEvent(self, event):
+        pass
+    def mousePressEvent(self, event):
+        pass
